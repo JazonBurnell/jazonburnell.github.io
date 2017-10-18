@@ -61,8 +61,8 @@ function SetRetinaScalarTo(newScalar) {
 		initialClientHeight = canvas.clientHeight;
 	}
 
-        canvas.width = initialClientWidth * newScalar;
-        canvas.height = initialClientHeight * newScalar;
+        canvas.width = window.innerWidth * newScalar * 0.95;
+        canvas.height = window.innerHeight * newScalar * 0.85;
  
         canvas.style.transformOrigin = canvas.width/newScalar + " " + canvas.height/newScalar;
         canvas.style.transform = "scale(" + 1.0/newScalar + ")";
