@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Unity-iPhone.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>E9E5CBE4EA1210E8C70E78CBA3CAD946E860EA11</string>
+				<key>dateExpires</key>
+				<string>8/24/19</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>NNBV4F5M7H.com.BlackBoxVR.MobileApp</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>NNBV4F5M7H</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>NNBV4F5M7H.com.BlackBoxVR.MobileApp</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>MobileApp.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>c1d201c8-7868-4bd7-8a35-f2c87f790d40</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.BlackBoxVR.MobileApp</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>NNBV4F5M7H</string>
+				<key>name</key>
+				<string>James Bradbury</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
