@@ -13,18 +13,6 @@
 					<key>url</key>
 					<string>https://jazonburnell.github.io/BBVR/v0_1_5_a/Unity-Project.ipa</string>
 				</dict>
-				<dict>
-					<key>kind</key>
-					<string>display-image</string>
-					<key>url</key>
-					<string>https://jazonburnell.github.io/BBVR/Icon_LogoBlackBg_57.png</string>
-				</dict>
-				<dict>
-					<key>kind</key>
-					<string>full-size-image</string>
-					<key>url</key>
-					<string>https://jazonburnell.github.io/BBVR/Icon_LogoBlackBg_512.png</string>
-				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
