@@ -37,9 +37,9 @@
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>c1d201c8-7868-4bd7-8a35-f2c87f790d40</string>
+				<string>50be5314-de9e-434d-a87c-50b5e718d7e5</string>
 				<key>name</key>
-				<string>iOS Team Ad Hoc Provisioning Profile: com.BlackBoxVR.MobileApp</string>
+				<string>BBVRMobileAppMainAdHocDist1</string>
 			</dict>
 			<key>team</key>
 			<dict>
