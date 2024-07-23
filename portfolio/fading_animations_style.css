@@ -1,0 +1,169 @@
+
+  .frame {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  img {
+    vertical-align: middle;
+  }
+
+
+ .cycleficontainer {
+    position: relative;
+    display: block;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .cyclefipic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation: fade 8s infinite;
+    animation: fade 8s infinite;
+  }
+
+
+  #cyclefipic1 {
+    animation-delay: 0s;
+    background-image: url('images/cyclefi_1.png');
+  }
+  
+  #cyclefipic2 {
+    animation-delay: 2s;
+    background-image: url('images/cyclefi_2.png');
+  }
+  
+  #cyclefipic3 {
+    animation-delay: 4s;
+    background-image: url('images/cyclefi_3.png');
+  }
+  
+  #cyclefipic4 {
+    animation-delay: 6s;
+    background-image: url('images/cyclefi_4.png');
+  }
+   .trenchescontainer {
+    position: relative;
+    display: block;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .trenchespic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation: fade 8s infinite;
+    animation: fade 8s infinite;
+  }
+
+
+  #trenchespic1 {
+    animation-delay: 0s;
+    background-image: url('images/T2_iPhone5_Retina_1.png');
+  }
+  
+  #trenchespic2 {
+    animation-delay: 2s;
+    background-image: url('images/T2_iPhone5_Retina_2.png');
+  }
+  
+  #trenchespic3 {
+    animation-delay: 4s;
+    background-image: url('images/T2_iPhone5_Retina_3.png');
+  }
+  
+  #trenchespic4 {
+    animation-delay: 6s;
+    background-image: url('images/T2_iPhone5_Retina_4.png');
+  }
+  
+  #trenchespic5 {
+    animation-delay: 8s;
+    background-image: url('images/T2_iPhone5_Retina_5.png');
+  }
+   .audio_tour_alaskacontainer {
+    position: relative;
+    display: block;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .audio_tour_alaskapic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-animation: fade 8s infinite;
+    animation: fade 8s infinite;
+  }
+
+
+  #audio_tour_alaskapic1 {
+    animation-delay: 0s;
+    background-image: url('images/audio_tour_ak_1.png');
+  }
+  
+  #audio_tour_alaskapic2 {
+    animation-delay: 2s;
+    background-image: url('images/audio_tour_ak_2.png');
+  }
+  
+  #audio_tour_alaskapic3 {
+    animation-delay: 4s;
+    background-image: url('images/audio_tour_ak_3.png');
+  }
+  
+  #audio_tour_alaskapic4 {
+    animation-delay: 6s;
+    background-image: url('images/audio_tour_ak_4.png');
+  }
+   @-webkit-keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
