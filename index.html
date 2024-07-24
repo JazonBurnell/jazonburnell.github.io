@@ -1,92 +1,401 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | BusMapping</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
-    <script src="TemplateData/UnityProgress.js"></script>
-  </head>
-  <body class="template">
-    <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="720px" width="1280px"></canvas>
-      <br>
-	<!--
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">BusMapping</div>
-	-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jazon Burnell</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="portfolio/style.css">
+<link rel="stylesheet" href="portfolio/fading_animations_style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: #1a1a1a;
+  color:white
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3portfolio/images/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+ <!--
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
-    <script type='text/javascript'>
-  var Module = {
-    TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    backgroundColor: "#222C36",
-    splashStyle: "Light",
-    dataUrl: "Release/BusMapping_v2_b1.data",
-    codeUrl: "Release/BusMapping_v2_b1.js",
-    asmUrl: "Release/BusMapping_v2_b1.asm.js",
-    memUrl: "Release/BusMapping_v2_b1.mem",
-  };
-</script>
-<script src="Release/UnityLoader.js"></script>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+-->
 
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>  
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image 
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+-->
+
+<!-- About Section -->
+<div class="w3-container" style="padding:64px 64px" id="about">
+  <h3 class="w3-center">Hi, I'm Jazon.</h3>
+  <p class="w3-center w3-large">I started mobile and game development at the launch of the Apple App Store in 2008. I primarly work in Unity and have extensive experience in Mobile, VR, AR, Web, Desktop and Console development.</p>
+  <!--<div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Responsive</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Passion</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Design</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+  -->
+</div>
+
+<div class="w3-container" style="padding:0% 5%" id="work">
+<!--PORTFOLIO_ITEMS_START--><div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>CycleFi</h3>
+      <ul>
+<li>Designed and implemented art style and graphics.</li>
+<li>Bluetooth Hardware integration with Bike Trainers.</li>
+<li>Photon Networking Multiplayer. </li>
+<li>Built in Unity for iOS, Android, PC and Mac. </li>
+
+<p><a href="https://www.playcyclefi.com/" class="w3-button w3-black"><i class="fa fa-th"> </i> Website</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/cyclefi_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Trenches</h3>
+      <ul>
+<li>Primary programmer on the Trenches series and spin offs. </li>
+<li>Implemented UI, gameplay, and multiplayer implementation for first generation of iOS devices. </li>
+<li>Built in Xcode for iOS.</li>
+
+<p><a href="https://apps.apple.com/us/app/trenches-ii/id593658634" class="w3-button w3-black"><i class="fa fa-th"> </i> App Store</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/T2_iPhone5_Retina_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Audio Tour Alaska</h3>
+      <ul>
+<li>Designed and implemented user interface.</li>
+<li>Custom native plugins for background audio and location.</li>
+<li>Google Maps integration.</li>
+<li>Apple CarPlay Integration</li>
+<li>Built in Unity for iOS and Android.</li>
+
+<p><a href="https://www.audiotouralaska.com" class="w3-button w3-black"><i class="fa fa-th"> </i> Website</a>
+ <a href="https://apps.apple.com/us/app/audio-tour-alaska/id6448201975" class="w3-button w3-black"><i class="fa fa-th"> </i> App Store</a>
+ <a href="https://play.google.com/store/apps/details?id=com.AudioTourAlaska.AudioTourAK" class="w3-button w3-black"><i class="fa fa-th"> </i> Google Play</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/audio_tour_ak_1.png" alt="" width="200"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Librarium VR</h3>
+      <ul>
+<li>Primary developer on the Scribe mobile app built with Unity that synced data with the main VR app. </li>
+<li>Implemented custom movement in VR app.</li>
+<li>Added visual effects and optimized VR app.</li>
+<li>Built in Unity for Meta Quest, iOS and Android.</li>
+
+<p><a href="https://www.oculus.com/experiences/quest/6291815170892714/" class="w3-button w3-black"><i class="fa fa-th"> </i> Meta Quest App</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/librarium_vr_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Lifeless Planet</h3>
+      <ul>
+<li>Implemented achievement integration for the Steam PC title and fixed various bugs. </li>
+<li>Lead developer for porting the Unity project to Xbox for the Xbox One during alpha. </li>
+<li>Built in Unity for PC, Mac and Xbox One.</li>
+
+<p><a href="https://store.steampowered.com/app/261530/Lifeless_Planet_Premier_Edition/" class="w3-button w3-black"><i class="fa fa-th"> </i> Steam</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/lifeless_planet_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Opioids and the Brain AR App</h3>
+      <ul>
+<li>Primary programmer integrating 3D assets into visual experience.</li>
+<li>Azure spatial anchor and local wifi shared experience support.</li>
+<li>Created for the Alaska Native Tribal Health Consortium under a CDC grant.</li>
+<li>Built in Unity for Hololens, iOS and Android.</li>
+
+<p><a href="https://stage2studios.com/interactive/opioids-and-the-brain-hololens-experience/" class="w3-button w3-black"><i class="fa fa-th"> </i> More Info</a>
+ <a href="https://apps.apple.com/us/app/opioids-and-the-brain/id1623918128" class="w3-button w3-black"><i class="fa fa-th"> </i> App Store</a>
+ <a href="https://play.google.com/store/apps/details?id=org.anthc.opioidsandthebrain&hl=en_IE&gl=US" class="w3-button w3-black"><i class="fa fa-th"> </i> Google Play</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/anthc_hololens_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Broken Space</h3>
+      <ul>
+<li>Designed and built game from ground up including 3D UI design, visual effects and gameplay. </li>
+<li>Built in Unity for iOS.</li>
+
+<p><a href="https://apps.apple.com/us/app/broken-space/id940301283" class="w3-button w3-black"><i class="fa fa-th"> </i> App Store</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/broken_space_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>BlackBox VR Mobile App</h3>
+      <ul>
+<li>Converted exact Figma UI into dynamic mobile UI.</li>
+<li>Implemented comprehensive health metrics with custom graphs.</li>
+<li>Full gym scheduling UI. </li>
+<li>Stripe payment integration</li>
+<li>Built in Unity for iOS and Android.</li>
+
+<p><a href="https://www.blackbox-vr.com" class="w3-button w3-black"><i class="fa fa-th"> </i> Website</a>
+ <a href="https://apps.apple.com/us/app/black-box-vr/id1458908017" class="w3-button w3-black"><i class="fa fa-th"> </i> App Store</a>
+ <a href="https://play.google.com/store/apps/details?id=com.BlackboxVR.MobileApp&hl=en_US&pli=1" class="w3-button w3-black"><i class="fa fa-th"> </i> Google Play</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/blackbox_vr_app_1.png" alt="" width="200"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Data Visualizer for beadedstream</h3>
+      <ul>
+<li>Implemented web based tool that parses and renders json temperature data. </li>
+<li>Streamlined UI for scrolling temperature histories.</li>
+<li>Built in Unity for WebGL.</li>
+
+<p><a href="http://visualization-poc.beadedcloud.com" class="w3-button w3-black"><i class="fa fa-th"> </i> Demo</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/beadedstream_poc_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>Capture App for beadedstream</h3>
+      <ul>
+<li>Sole developer on the iOS native Capture app that connects to beadedstream data loggers over bluetooth to download and export data. </li>
+<li>Designed and implemented UI and data decoding logic to aid in configuring multiple generations of data loggers.</li>
+<li>Optimized bluetooth communications to improve connectivity reliability. </li>
+<li>Built in Xcode for iOS.</li>
+
+<p><a href="https://www.beadedstream.com/product/capture-mobile-app/" class="w3-button w3-black"><i class="fa fa-th"> </i> App Store</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/beadedstream_capture_1.png" alt="" width="250"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<div class="w3-container w3-light-grey w3-round-xlarge" style="padding:16px 16px">
+  <div class="myContainer" style="display: flex;align-items: center;">
+    <div class="w3-col m6" style="padding:16px 16px">
+      <h3>VR Training Simulations</h3>
+      <ul>
+<li>Designed systems in Unity to aid in the design of virtual reality training simulations.</li>
+<li>Implemented all VR logic including movement, input, haptics and interctions.</li>
+<li>Built in Unity for Meta Quest and HTC Vive.</li>
+
+<p><a href="www.res3d.com" class="w3-button w3-black"><i class="fa fa-th"> </i> More Info</a>
+ </p>      </ul>
+    </div>
+    <div class="w3-col m6" style="text-align:center; padding:8px 8px;"><img class="frame w3-round-large" src="portfolio/images/res3d_1.png" alt="" width="700"></div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:8px 8px" id="spacer"></div>
+
+
+<!--PORTFOLIO_ITEMS_END-->
+</div>
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Contact Section -->
+ <!--
+<div class="w3-container" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    
+  </div>
+</div>
+-->
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64">
+  <a href="#about" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+  <p>Jazon Burnell ©2024</p>
+</footer>
+ 
 <script>
-var lastDevicePixelRatio = 0;
-
-var initialClientWidth = 0;
-var initialClientHeight = 0;
-
-/*
-var adjustRetina = function() {
-    if (devicePixelRatio > 1) {
-        var canvas = document.querySelector("canvas");
- 
-        canvas.width = canvas.clientWidth * 2;
-        canvas.height = canvas.clientHeight * 2;
- 
-        canvas.style.transformOrigin = canvas.width/2 + " " + canvas.height/2;
-        canvas.style.transform = "scale("+1.0/2+")";
-    }
-}
-*/
-
-function SetRetinaScalarTo(newScalar) {
-        var canvas = document.querySelector("canvas");
- 
-	if (initialClientWidth <= 1 || initialClientHeight <= 1) {
-		initialClientWidth = canvas.clientWidth;
-		initialClientHeight = canvas.clientHeight;
-	}
-
-        canvas.width = window.innerWidth * newScalar * 0.95;
-        canvas.height = window.innerHeight * newScalar * 0.85;
- 
-        canvas.style.transformOrigin = canvas.width/newScalar + " " + canvas.height/newScalar;
-        canvas.style.transform = "scale(" + 1.0/newScalar + ")";
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 
-function loop(timestamp) {
-  	if (devicePixelRatio != lastDevicePixelRatio) {
-    		lastDevicePixelRatio = devicePixelRatio;
 
-		if (devicePixelRatio > 1) {
-    			SetRetinaScalarTo(2);
-		}
-		else {
-			SetRetinaScalarTo(1);
-		}
-  	}
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
 
-  	window.requestAnimationFrame(loop)
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
 }
 
-window.requestAnimationFrame(loop)
- 
-//adjustRetina();
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
 </script>
 
-  </body>
+</body>
 </html>
